@@ -12,7 +12,7 @@ const TodoItemStyles = styled.li`
   /* border-bottom: 1px solid #ccc; */
   background: var(--white);
   padding: 0 30px;
-  margin: 15px 0;
+  margin: 8px 0;
   border-radius: 7px;
   transition: 1s;
   /* cursor: pointer; */
