@@ -7,6 +7,7 @@ const HeaderStyles = styled.header`
   .header__title {
     letter-spacing: 8px;
     margin-bottom: 20px;
+    font-weight: var (--normal-font);
   }
   .header__search {
     margin-bottom: 30px;

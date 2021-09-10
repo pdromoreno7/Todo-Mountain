@@ -8,10 +8,10 @@
 :root {
   /*===== Palet color =====*/
   --main-color: #f0f0ff;
-  --secun-color: #2232af;
-  --tercer-color: #6875d8;
-  --font-color-1: #142335;
-  --font-color-2: #89969f;
+  --secun-color: #002b3d;
+  --tercer-color: #00798e;
+
+  --font-color-1: #757d83;
   --white: #ffffff;
   --card-gradient-color: linear-gradient(
     104.46deg,
@@ -65,8 +65,7 @@ li {
 a {
   text-decoration: none;
 }
-img,
-svg {
+img {
   width: 100%;
   height: 100%;
   object-fit: cover;

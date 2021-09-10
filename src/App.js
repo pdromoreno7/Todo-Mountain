@@ -1,6 +1,6 @@
-import { CreateTodoButton } from "./components/CreateTodoButton";
+// import { CreateTodoButton } from "./components/CreateTodoButton";
 import { Header } from "./components/Header";
-import { TodoCounter } from "./components/TodoCounter";
+// import { TodoCounter } from "./components/TodoCounter";
 import { TodoItem } from "./components/TodoItem";
 import { TodoList } from "./components/TodoList";
 
@@ -16,14 +16,14 @@ function App() {
   return (
     <>
       <Header />
-      <TodoCounter />
+      {/* <TodoCounter /> */}
 
       <TodoList>
         {todos.map((todo) => (
           <TodoItem key={todo.text} text={todo.text} />
         ))}
       </TodoList>
-      <CreateTodoButton />
+      {/* <CreateTodoButton /> */}
     </>
   );
 }
