@@ -1,13 +1,89 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+:root {
+  /*===== Palet color =====*/
+  --main-color: #f0f0ff;
+  --secun-color: #2232af;
+  --tercer-color: #6875d8;
+  --font-color-1: #142335;
+  --font-color-2: #89969f;
+  --white: #ffffff;
+  --card-gradient-color: linear-gradient(
+    104.46deg,
+    #2232af -5.16%,
+    #6abce4 107.22%
+  );
+  --gradient-img: linear-gradient(
+    180deg,
+    rgba(196, 196, 196, 0) -18.02%,
+    rgba(247, 247, 252, 0.8) 60.64%
+  );
+  /*===== Font and typography =====*/
+  --body-font: "Poppins", sans-serif;
+  --biggest-font-size: 3rem;
+  --h1-font-size: 1.8rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  /*===== Font W =====*/
+  --light-font: 400;
+  --normal-font: 500;
+  --medium-font: 600;
+  --Bold-font: 700;
+  /*===== Margenes =====*/
+  --mb-1: 0.5rem;
+  --mb-2: 1rem;
+  --mb-3: 1.5rem;
+  --mb-4: 2rem;
+  --mb-5: 2.5rem;
+  --mb-6: 3rem;
+  /*===== z index =====*/
+  --z-normal: 1;
+  --z-tooltip: 10;
+  --z-fixed: 100;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: var(--body-font);
+  background-color: var(--main-color);
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+img,
+svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+button {
+  outline: none;
+}
+.iconSize {
+  font-size: 1.8rem;
+}
+.bd-container {
+  /* max-width: 1024px; */
+  max-width: 1300px;
+  /* width: calc(100% - 2rem); */
+  /* margin-left: var(--mb-2);
+  margin-right: var(--mb-2); */
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0 1rem;
 }

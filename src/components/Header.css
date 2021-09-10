@@ -1,0 +1,13 @@
+.header__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-image: linear-gradient(
+      rgba(32, 46, 82, 0.75),
+      rgba(10, 14, 24, 0.75)
+    ),
+    url(../assets/image/HeaderImg.jpg);
+  background-size: cover;
+  height: 200px;
+  color: white;
+}
