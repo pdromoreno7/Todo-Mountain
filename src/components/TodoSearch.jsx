@@ -46,7 +46,7 @@ export function TodoSearch() {
         <div className="search__box">
           <input
             type="text"
-            placeholder="Busca una tarea"
+            placeholder="Buscar una tarea"
             className="search__box-input"
           />
           <button className="search__box-button" type="submit">

@@ -1,4 +1,5 @@
 // import { CreateTodoButton } from "./components/CreateTodoButton";
+import { CreateTodoButton } from "./components/CreateTodoButton";
 import { Header } from "./components/Header";
 // import { TodoCounter } from "./components/TodoCounter";
 import { TodoItem } from "./components/TodoItem";
@@ -27,7 +28,7 @@ function App() {
           />
         ))}
       </TodoList>
-      {/* <CreateTodoButton /> */}
+      <CreateTodoButton />
     </>
   );
 }

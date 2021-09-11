@@ -36,17 +36,11 @@
   --normal-font: 500;
   --medium-font: 600;
   --Bold-font: 700;
-  /*===== Margenes =====*/
-  --mb-1: 0.5rem;
-  --mb-2: 1rem;
-  --mb-3: 1.5rem;
-  --mb-4: 2rem;
-  --mb-5: 2.5rem;
-  --mb-6: 3rem;
+
   /*===== z index =====*/
-  --z-normal: 1;
+  /* --z-normal: 1;
   --z-tooltip: 10;
-  --z-fixed: 100;
+  --z-fixed: 100; */
 }
 
 html {
