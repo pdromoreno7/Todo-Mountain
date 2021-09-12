@@ -40,6 +40,10 @@ const Searchstyles = styled.div`
 `;
 
 export function TodoSearch() {
+  const onSearchValueChange = (e) => {
+    console.log(e.target.value);
+  };
+
   return (
     <Searchstyles>
       <form className="search__container">
@@ -48,6 +52,7 @@ export function TodoSearch() {
             type="text"
             placeholder="Buscar una tarea"
             className="search__box-input"
+            onChange={onSearchValueChange}
           />
           <button className="search__box-button" type="submit">
             <FaSearch size={15} />

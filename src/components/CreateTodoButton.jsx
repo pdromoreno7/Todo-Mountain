@@ -1,7 +1,7 @@
 import { GrAdd } from "react-icons/gr";
 import styled from "styled-components";
 
-const ButtonAddTodo = styled.i`
+const ButtonAddTodo = styled.button`
   background-color: var(--secun-color);
   box-shadow: 0px 5px 25px rgba(97, 218, 250, 0.5);
   border: none;
@@ -29,8 +29,12 @@ const ButtonAddTodo = styled.i`
   }
 `;
 export function CreateTodoButton() {
+  const onClickButton = (msg) => {
+    alert(msg);
+  };
+
   return (
-    <ButtonAddTodo>
+    <ButtonAddTodo onClick={onClickButton}>
       <GrAdd />
     </ButtonAddTodo>
   );

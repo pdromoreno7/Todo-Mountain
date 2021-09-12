@@ -50,10 +50,18 @@ const TodoItemStyles = styled.li`
 `;
 
 export function TodoItem({ text, completed }) {
+  const onComplete = () => {
+    alert("Ya completaste el todo " + text);
+  };
+  const onDelate = () => {
+    alert("Borraste el todo " + text);
+  };
+
   return (
     <TodoItemStyles>
       <span
         className={`todoItem__check ${completed && "todoItem__check-active"}`}
+        onClick={onComplete}
       >
         <BsCheck />
       </span>
@@ -62,7 +70,7 @@ export function TodoItem({ text, completed }) {
       >
         <p>{text}</p>
       </div>
-      <span className="todoItem__delate">
+      <span className="todoItem__delate" onClick={onDelate}>
         <GrClose />
       </span>
     </TodoItemStyles>
