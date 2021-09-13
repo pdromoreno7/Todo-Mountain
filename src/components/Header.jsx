@@ -1,3 +1,4 @@
+import React from "react";
 import styled from "styled-components";
 import { TodoSearch } from "./TodoSearch";
 import "./Header.css";
@@ -21,14 +22,18 @@ const HeaderStyles = styled.header`
   }
 `;
 
-export function Header() {
+export function Header({ searchValue, setSearchValue }) {
+  // const [searchValue, setSearchValue] = React.useState("");
   return (
     <HeaderStyles>
       <div className="header__container">
         <div className="header__box bd-container">
           <h1 className="header__title">TODO</h1>
           <div className="header__search">
-            <TodoSearch />
+            <TodoSearch
+              searchValue={searchValue}
+              setSearchValue={setSearchValue}
+            />
           </div>
         </div>
       </div>

@@ -1,3 +1,4 @@
+import React from "react";
 import { FaSearch } from "react-icons/fa";
 import styled from "styled-components";
 const Searchstyles = styled.div`
@@ -39,9 +40,12 @@ const Searchstyles = styled.div`
   }
 `;
 
-export function TodoSearch() {
+export function TodoSearch({ searchValue, setSearchValue }) {
+  // const [searchValue, setSearchValue] = React.useState("");
+
   const onSearchValueChange = (e) => {
-    console.log(e.target.value);
+    // console.log(e.target.value);
+    setSearchValue(e.target.value);
   };
 
   return (
@@ -51,6 +55,7 @@ export function TodoSearch() {
           <input
             type="text"
             placeholder="Buscar una tarea"
+            value={searchValue}
             className="search__box-input"
             onChange={onSearchValueChange}
           />
@@ -59,6 +64,7 @@ export function TodoSearch() {
           </button>
         </div>
       </form>
+      <p>{searchValue}</p>
     </Searchstyles>
   );
 }

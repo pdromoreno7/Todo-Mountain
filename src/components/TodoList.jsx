@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const TodoListStyles = styled.section`
-  padding: 40px 0;
+  padding: 7px 0;
   display: flex;
   justify-content: center;
   align-items: center;
