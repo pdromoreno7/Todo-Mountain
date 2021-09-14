@@ -21,18 +21,22 @@ function App() {
   const [searchValue, setSearchValue] = useState("");
 
   // La siguiente linea filtra los todos completados osea los que viene con un true
+  //Esto para mostraslo en todoCounter:
   const completedTodos = todos.filter((todo) => todo.completed === true).length;
   const totalTodos = todos.length;
 
-  // Arrglo para mostrar en panatalla los todos busccados en el search:
+  // Arreglo para mostrar en panatalla los todos busccados en el search:
   let searchedTodos = [];
 
-  if (!searchedTodos >= 1) {
+  //Se evalua si en estado searchValue tenga un valor
+  //tranformamos a minuscula:
+  // Se llama el estado de SearchValue para pasarlo a minuscula:
+  if (!searchValue.length >= 1) {
     searchedTodos = todos;
   } else {
     searchedTodos = todos.filter((todo) => {
-      //tranformamos a minuscula:
       const todoText = todo.text.toLowerCase();
+
       const searchText = searchValue.toLowerCase();
       return todoText.includes(searchText);
     });
@@ -43,6 +47,13 @@ function App() {
 
     const newTodos = [...todos];
     newTodos[todoIndex].completed = !newTodos[todoIndex].completed;
+    setTodos(newTodos);
+  };
+  const delateTodo = (text) => {
+    const todoIndex = todos.findIndex((todo) => todo.text === text);
+
+    const newTodos = [...todos];
+    newTodos.splice(todoIndex, 1);
     setTodos(newTodos);
   };
 
@@ -58,6 +69,7 @@ function App() {
             text={todo.text}
             completed={todo.completed}
             onComplete={() => toggleCompleteTodo(todo.text)}
+            onDelete={() => delateTodo(todo.text)}
           />
         ))}
       </TodoList>

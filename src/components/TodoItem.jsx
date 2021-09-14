@@ -48,10 +48,10 @@ const TodoItemStyles = styled.li`
   }
 `;
 
-export function TodoItem({ text, completed, onComplete }) {
-  const onDelate = () => {
-    alert("Borraste el todo " + text);
-  };
+export function TodoItem({ text, completed, onComplete, onDelete }) {
+  // const onDelate = () => {
+  //   alert("Borraste el todo " + text);
+  // };
 
   return (
     <TodoItemStyles>
@@ -66,7 +66,7 @@ export function TodoItem({ text, completed, onComplete }) {
       >
         <p>{text}</p>
       </div>
-      <span className="todoItem__delate" onClick={onDelate}>
+      <span className="todoItem__delate" onClick={onDelete}>
         <GrClose />
       </span>
     </TodoItemStyles>
