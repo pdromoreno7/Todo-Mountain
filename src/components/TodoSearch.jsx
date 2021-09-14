@@ -64,7 +64,7 @@ export function TodoSearch({ searchValue, setSearchValue }) {
           </button>
         </div>
       </form>
-      <p>{searchValue}</p>
+      {/* <p>{searchValue}</p> */}
     </Searchstyles>
   );
 }

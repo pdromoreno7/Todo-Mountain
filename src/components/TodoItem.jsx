@@ -19,7 +19,6 @@ const TodoItemStyles = styled.li`
   :hover {
     box-shadow: 1px 14px 25px 0px #b3b3b3;
     transform: translateY(-0.2rem);
-    transition: 1s;
   }
   .todoItem__box {
     width: 100%;
