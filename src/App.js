@@ -31,11 +31,20 @@ function App() {
     searchedTodos = todos;
   } else {
     searchedTodos = todos.filter((todo) => {
+      //tranformamos a minuscula:
       const todoText = todo.text.toLowerCase();
       const searchText = searchValue.toLowerCase();
       return todoText.includes(searchText);
     });
   }
+
+  const toggleCompleteTodo = (text) => {
+    const todoIndex = todos.findIndex((todo) => todo.text === text);
+
+    const newTodos = [...todos];
+    newTodos[todoIndex].completed = !newTodos[todoIndex].completed;
+    setTodos(newTodos);
+  };
 
   return (
     <>
@@ -48,6 +57,7 @@ function App() {
             key={todo.text}
             text={todo.text}
             completed={todo.completed}
+            onComplete={() => toggleCompleteTodo(todo.text)}
           />
         ))}
       </TodoList>

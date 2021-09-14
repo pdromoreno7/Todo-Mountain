@@ -18,7 +18,7 @@ const TodoItemStyles = styled.li`
   /* cursor: pointer; */
   :hover {
     box-shadow: 1px 14px 25px 0px #b3b3b3;
-    transform: translateY(-0.2rem);
+    transform: translateY(-0.05rem);
   }
   .todoItem__box {
     width: 100%;
@@ -48,10 +48,7 @@ const TodoItemStyles = styled.li`
   }
 `;
 
-export function TodoItem({ text, completed }) {
-  const onComplete = () => {
-    alert("Ya completaste el todo " + text);
-  };
+export function TodoItem({ text, completed, onComplete }) {
   const onDelate = () => {
     alert("Borraste el todo " + text);
   };
