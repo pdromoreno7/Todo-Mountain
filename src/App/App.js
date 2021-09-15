@@ -1,12 +1,7 @@
 // import { CreateTodoButton } from "./components/CreateTodoButton";
 import { useState } from "react";
-import { CreateTodoButton } from "./components/CreateTodoButton";
-import { Header } from "./components/Header";
-import { TodoCounter } from "./components/TodoCounter";
-import { TodoItem } from "./components/TodoItem";
-import { TodoList } from "./components/TodoList";
+import { AppUI } from "./AppUI";
 
-// import './App.css';
 // Se creo este arreglo para mandar informacion de los todos:
 const defaultTodos = [
   { text: "Platzi", completed: true },
@@ -49,7 +44,7 @@ function App() {
     newTodos[todoIndex].completed = !newTodos[todoIndex].completed;
     setTodos(newTodos);
   };
-  const delateTodo = (text) => {
+  const deleteTodo = (text) => {
     const todoIndex = todos.findIndex((todo) => todo.text === text);
 
     const newTodos = [...todos];
@@ -58,23 +53,15 @@ function App() {
   };
 
   return (
-    <>
-      <Header searchValue={searchValue} setSearchValue={setSearchValue} />
-      <TodoCounter total={totalTodos} completed={completedTodos} />
-
-      <TodoList>
-        {searchedTodos.map((todo) => (
-          <TodoItem
-            key={todo.text}
-            text={todo.text}
-            completed={todo.completed}
-            onComplete={() => toggleCompleteTodo(todo.text)}
-            onDelete={() => delateTodo(todo.text)}
-          />
-        ))}
-      </TodoList>
-      <CreateTodoButton />
-    </>
+    <AppUI
+      totalTodos={totalTodos}
+      completedTodos={completedTodos}
+      searchValue={searchValue}
+      setSearchValue={setSearchValue}
+      searchedTodos={searchedTodos}
+      toggleCompleteTodo={toggleCompleteTodo}
+      deleteTodo={deleteTodo}
+    />
   );
 }
 
