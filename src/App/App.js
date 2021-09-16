@@ -11,22 +11,36 @@ import { AppUI } from "./AppUI";
 //   { text: "Leer Clean JavaScript", completed: false },
 // ];
 
-function App() {
+function useLocalStorage(itemName, initialValue) {
   // ==================== Manejo de local Storage ==========================================
 
-  const localStorageTodos = localStorage.getItem("TODOS_V1");
-  let parsedTodos;
+  const localStorageItem = localStorage.getItem(itemName);
+  let parsedItem;
 
-  if (!localStorageTodos) {
-    localStorage.setItem("TODOS_V1", JSON.stringify([]));
-    parsedTodos = [];
+  if (!localStorageItem) {
+    localStorage.setItem(itemName, JSON.stringify(initialValue));
+    parsedItem = initialValue;
   } else {
-    parsedTodos = JSON.parse(localStorageTodos);
+    parsedItem = JSON.parse(localStorageItem);
   }
 
-  // ================== State ==========================================
+  const [item, setItem] = useState(parsedItem);
 
-  const [todos, setTodos] = useState(parsedTodos);
+  // ================== Funcion para persistencia de datos ==================================
+
+  const saveItem = (newItem) => {
+    const stringifiedItem = JSON.stringify(newItem);
+    localStorage.setItem(itemName, stringifiedItem);
+    setItem(newItem);
+  };
+
+  return [item, saveItem];
+}
+
+function App() {
+  // ================== State ==========================================
+  const [todos, saveTodos] = useLocalStorage("TODOS_V1", []);
+
   const [searchValue, setSearchValue] = useState("");
 
   // ================== Contar todos ==================================
@@ -54,14 +68,6 @@ function App() {
       return todoText.includes(searchText);
     });
   }
-
-  // ================== Funcion para persistencia de datos ==================================
-
-  const saveTodos = (newTodos) => {
-    const stringifiedTodos = JSON.stringify(newTodos);
-    localStorage.setItem("TODOS_V1", stringifiedTodos);
-    setTodos(newTodos);
-  };
 
   // ============================ Check y dalate de todos =======================================
 
