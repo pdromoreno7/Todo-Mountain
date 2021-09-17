@@ -1,5 +1,5 @@
 // import { CreateTodoButton } from "./components/CreateTodoButton";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AppUI } from "./AppUI";
 
 // Se creo este arreglo para mandar informacion de los todos:
@@ -11,35 +11,61 @@ import { AppUI } from "./AppUI";
 //   { text: "Leer Clean JavaScript", completed: false },
 // ];
 
+// Hook personalisado para LocalStorage
 function useLocalStorage(itemName, initialValue) {
-  // ==================== Manejo de local Storage ==========================================
+  const [error, setError] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [item, setItem] = useState(initialValue);
 
-  const localStorageItem = localStorage.getItem(itemName);
-  let parsedItem;
+  useEffect(() => {
+    setTimeout(() => {
+      try {
+        const localStorageItem = localStorage.getItem(itemName);
+        let parsedItem;
 
-  if (!localStorageItem) {
-    localStorage.setItem(itemName, JSON.stringify(initialValue));
-    parsedItem = initialValue;
-  } else {
-    parsedItem = JSON.parse(localStorageItem);
-  }
+        if (!localStorageItem) {
+          localStorage.setItem(itemName, JSON.stringify(initialValue));
+          parsedItem = initialValue;
+        } else {
+          parsedItem = JSON.parse(localStorageItem);
+        }
 
-  const [item, setItem] = useState(parsedItem);
+        setItem(parsedItem);
+        setLoading(false);
+      } catch (error) {
+        setError(error);
+      }
+    }, 1000);
+  }, []);
 
   // ================== Funcion para persistencia de datos ==================================
 
   const saveItem = (newItem) => {
-    const stringifiedItem = JSON.stringify(newItem);
-    localStorage.setItem(itemName, stringifiedItem);
-    setItem(newItem);
+    try {
+      const stringifiedItem = JSON.stringify(newItem);
+      localStorage.setItem(itemName, stringifiedItem);
+      setItem(newItem);
+    } catch (error) {
+      setError(error);
+    }
   };
 
-  return [item, saveItem];
+  return {
+    item,
+    saveItem,
+    loading,
+    error,
+  };
 }
 
 function App() {
   // ================== State ==========================================
-  const [todos, saveTodos] = useLocalStorage("TODOS_V1", []);
+  const {
+    item: todos,
+    saveItem: saveTodos,
+    loading,
+    error,
+  } = useLocalStorage("TODOS_V1", []);
 
   const [searchValue, setSearchValue] = useState("");
 
@@ -88,6 +114,8 @@ function App() {
 
   return (
     <AppUI
+      loading={loading}
+      error={error}
       totalTodos={totalTodos}
       completedTodos={completedTodos}
       searchValue={searchValue}
