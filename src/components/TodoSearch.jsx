@@ -1,6 +1,8 @@
 import React from "react";
 import { FaSearch } from "react-icons/fa";
 import styled from "styled-components";
+import { TodoContext } from "../TodoContext/TodoContext";
+
 const Searchstyles = styled.div`
   .search__container {
     display: flex;
@@ -40,8 +42,8 @@ const Searchstyles = styled.div`
   }
 `;
 
-export function TodoSearch({ searchValue, setSearchValue }) {
-  // const [searchValue, setSearchValue] = React.useState("");
+export function TodoSearch() {
+  const { searchValue, setSearchValue } = React.useContext(TodoContext);
 
   const onSearchValueChange = (e) => {
     // console.log(e.target.value);

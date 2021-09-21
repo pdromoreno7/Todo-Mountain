@@ -12,7 +12,7 @@ const ButtonAddTodo = styled.button`
   bottom: 60px;
   right: 24px;
   font-weight: bold;
-
+  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,9 +28,9 @@ const ButtonAddTodo = styled.button`
     transform: rotate(224deg);
   }
 `;
-export function CreateTodoButton() {
-  const onClickButton = (msg) => {
-    alert(msg);
+export function CreateTodoButton(props) {
+  const onClickButton = () => {
+    props.setOpenModal(!props.openModal);
   };
 
   return (

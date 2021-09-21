@@ -22,7 +22,7 @@ const HeaderStyles = styled.header`
   }
 `;
 
-export function Header({ searchValue, setSearchValue }) {
+export function Header() {
   // const [searchValue, setSearchValue] = React.useState("");
   return (
     <HeaderStyles>
@@ -31,8 +31,8 @@ export function Header({ searchValue, setSearchValue }) {
           <h1 className="header__title">TODO</h1>
           <div className="header__search">
             <TodoSearch
-              searchValue={searchValue}
-              setSearchValue={setSearchValue}
+            // searchValue={searchValue}
+            // setSearchValue={setSearchValue}
             />
           </div>
         </div>
