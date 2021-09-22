@@ -4,8 +4,10 @@ const FooterStyles = styled.footer`
   display: flex;
   justify-content: center;
   align-self: flex-end;
+  padding-bottom: 10px;
 
   p {
+    font-size: var(--small-font-size);
     color: var(--font-color-1);
   }
 `;
