@@ -27,7 +27,7 @@ export function Header() {
   return (
     <HeaderStyles>
       <div className="header__container">
-        <div className="header__box bd-container">
+        <div className="header__box mobile-container">
           <h1 className="header__title">TODO</h1>
           <div className="header__search">
             <TodoSearch

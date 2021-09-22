@@ -19,7 +19,7 @@ const TodoListStyles = styled.section`
 
 export function TodoList(props) {
   return (
-    <TodoListStyles className="bd-container">
+    <TodoListStyles className="mobile-container">
       <ul className="todoList__box">{props.children}</ul>
     </TodoListStyles>
   );

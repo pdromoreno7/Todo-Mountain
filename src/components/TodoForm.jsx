@@ -87,7 +87,7 @@ export function TodoForm() {
     setOpenModal(false);
   };
   return (
-    <TodoFormStyles onSubmit={onSubmit}>
+    <TodoFormStyles onSubmit={onSubmit} className="mobile-container">
       <label className="form__title">Añadir un todo</label>
       <textarea
         value={newTodoValue}
