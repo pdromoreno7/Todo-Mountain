@@ -92,7 +92,7 @@ export function TodoForm() {
       <textarea
         value={newTodoValue}
         onChange={onChange}
-        placeholder="Escribe aqui tu tarea..."
+        placeholder="Escribe aquí tu tarea..."
       />
       <div className="form__butomBox">
         <button
