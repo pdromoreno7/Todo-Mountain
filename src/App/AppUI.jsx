@@ -24,7 +24,7 @@ export function AppUI() {
       <TodoCounter />
 
       <TodoList>
-        {error && <p>Hubo u error</p>}
+        {error && <p>Hubo un error</p>}
         {loading && <Spinner />}
         {!loading && !searchedTodos.length && <p>Crea tu primer todo!</p>}
 
