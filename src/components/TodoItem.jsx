@@ -12,7 +12,7 @@ const TodoItemStyles = styled.li`
   /* border-bottom: 1px solid #ccc; */
   background: var(--white);
   padding: 0 30px;
-  margin: 8px 0;
+  margin: 3px 0;
   border-radius: 7px;
   transition: 1s;
   /* cursor: pointer; */
@@ -30,6 +30,9 @@ const TodoItemStyles = styled.li`
   }
   p {
     color: var(--font-color-1);
+    /* cursor: pointer; */
+  }
+  .todoItem__check {
     cursor: pointer;
   }
   .todoItem__check-active {
