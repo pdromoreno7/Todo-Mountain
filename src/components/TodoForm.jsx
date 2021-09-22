@@ -9,7 +9,7 @@ const TodoFormStyles = styled.form`
   box-shadow: 1px 14px 25px 0px #3d3d3d;
   width: 80%;
   display: flex;
-  gap: 1.5rem;
+  /* gap: 1.5rem; */
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -18,6 +18,7 @@ const TodoFormStyles = styled.form`
     font-size: var(--h2-font-size);
     color: var(--font-color-1);
     font-weight: var(--medium-font);
+    margin-bottom: 1.5rem;
   }
   textarea {
     font-family: "Poppins";
@@ -30,6 +31,7 @@ const TodoFormStyles = styled.form`
     outline: none;
     border: none;
     border-radius: 8px;
+    margin-bottom: 1.5rem;
     /* margin-top: 1rem; */
     :focus {
       border: #a2a3a3 solid 1px;
@@ -37,7 +39,7 @@ const TodoFormStyles = styled.form`
   }
   .form__butomBox {
     display: flex;
-    gap: 1rem;
+    /* gap: 1rem; */
   }
   .form__butomBox-submit {
     font-family: "Poppins";
@@ -54,6 +56,7 @@ const TodoFormStyles = styled.form`
     }
   }
   .form__butomBox-cancel {
+    margin-right: 1rem;
     font-family: "Poppins";
     padding: 10px 15px;
     outline: none;
