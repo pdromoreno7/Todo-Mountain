@@ -41,7 +41,16 @@ export function TodoProvider({ children }) {
     });
   }
 
-  // ============================ Check y dalate de todos =======================================
+  // ============================ Check, save y dalate de todos =======================================
+
+  const addTodo = (text) => {
+    const newTodos = [...todos];
+    newTodos.push({
+      completed: false,
+      text,
+    });
+    saveTodos(newTodos);
+  };
 
   const toggleCompleteTodo = (text) => {
     const todoIndex = todos.findIndex((todo) => todo.text === text);
@@ -68,6 +77,7 @@ export function TodoProvider({ children }) {
         searchValue,
         setSearchValue,
         searchedTodos,
+        addTodo,
         toggleCompleteTodo,
         deleteTodo,
         openModal,

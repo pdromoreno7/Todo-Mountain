@@ -13,6 +13,7 @@ const TodoListStyles = styled.section`
     height: 100%;
     padding: 50px 0;
     overflow: hidden;
+    transition: 1s;
   }
 `;
 

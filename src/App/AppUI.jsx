@@ -7,6 +7,7 @@ import { TodoItem } from "../components/TodoItem";
 import { TodoList } from "../components/TodoList";
 import { Modal } from "../components/Modal";
 import { TodoForm } from "../components/TodoForm";
+import { Spinner } from "../components/Spinner";
 export function AppUI() {
   const {
     error,
@@ -24,7 +25,7 @@ export function AppUI() {
 
       <TodoList>
         {error && <p>Hubo u error</p>}
-        {loading && <p>Estamos cargando...</p>}
+        {loading && <Spinner />}
         {!loading && !searchedTodos.length && <p>Crea tu primer todo!</p>}
 
         {searchedTodos.map((todo) => (
