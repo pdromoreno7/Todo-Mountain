@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/Todo-Mountain/static/css/main.cd414a5b.chunk.css",
-    "main.js": "/Todo-Mountain/static/js/main.298e3372.chunk.js",
-    "main.js.map": "/Todo-Mountain/static/js/main.298e3372.chunk.js.map",
+    "main.css": "/Todo-Mountain/static/css/main.08ff363d.chunk.css",
+    "main.js": "/Todo-Mountain/static/js/main.b4aff6bb.chunk.js",
+    "main.js.map": "/Todo-Mountain/static/js/main.b4aff6bb.chunk.js.map",
     "runtime-main.js": "/Todo-Mountain/static/js/runtime-main.5cb08315.js",
     "runtime-main.js.map": "/Todo-Mountain/static/js/runtime-main.5cb08315.js.map",
     "static/js/2.f5de4bb2.chunk.js": "/Todo-Mountain/static/js/2.f5de4bb2.chunk.js",
     "static/js/2.f5de4bb2.chunk.js.map": "/Todo-Mountain/static/js/2.f5de4bb2.chunk.js.map",
     "index.html": "/Todo-Mountain/index.html",
-    "static/css/main.cd414a5b.chunk.css.map": "/Todo-Mountain/static/css/main.cd414a5b.chunk.css.map",
+    "static/css/main.08ff363d.chunk.css.map": "/Todo-Mountain/static/css/main.08ff363d.chunk.css.map",
     "static/js/2.f5de4bb2.chunk.js.LICENSE.txt": "/Todo-Mountain/static/js/2.f5de4bb2.chunk.js.LICENSE.txt",
     "static/media/Header.css": "/Todo-Mountain/static/media/pexels-pixabay-417173.0dd29f09.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.5cb08315.js",
     "static/js/2.f5de4bb2.chunk.js",
-    "static/css/main.cd414a5b.chunk.css",
-    "static/js/main.298e3372.chunk.js"
+    "static/css/main.08ff363d.chunk.css",
+    "static/js/main.b4aff6bb.chunk.js"
   ]
 }
