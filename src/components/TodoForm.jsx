@@ -32,7 +32,7 @@ const TodoFormStyles = styled.form`
     border-radius: 8px;
     /* margin-top: 1rem; */
     :focus {
-      outline: #a2a3a3 solid 1px;
+      border: #a2a3a3 solid 1px;
     }
   }
   .form__butomBox {
