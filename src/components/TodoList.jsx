@@ -5,6 +5,7 @@ const TodoListStyles = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 67vh;
   .todoList__box {
     display: flex;
     flex-direction: column;

@@ -8,6 +8,7 @@ import { TodoList } from "../components/TodoList";
 import { Modal } from "../components/Modal";
 import { TodoForm } from "../components/TodoForm";
 import { Spinner } from "../components/Spinner";
+import { Footer } from "../components/Footer";
 export function AppUI() {
   const {
     error,
@@ -46,6 +47,7 @@ export function AppUI() {
       )}
 
       <CreateTodoButton setOpenModal={setOpenModal} openModal={openModal} />
+      <Footer />
     </>
   );
 }
