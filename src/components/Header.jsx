@@ -22,18 +22,15 @@ const HeaderStyles = styled.header`
   }
 `;
 
-export function Header() {
-  // const [searchValue, setSearchValue] = React.useState("");
+export function Header(props) {
   return (
     <HeaderStyles>
       <div className="header__container">
         <div className="header__box mobile-container">
           <h1 className="header__title">TODO</h1>
           <div className="header__search">
-            <TodoSearch
-            // searchValue={searchValue}
-            // setSearchValue={setSearchValue}
-            />
+            {/* <TodoSearch/> */}
+            {props.children}
           </div>
         </div>
       </div>

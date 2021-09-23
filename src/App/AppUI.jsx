@@ -9,6 +9,7 @@ import { Modal } from "../components/Modal";
 import { TodoForm } from "../components/TodoForm";
 import { Spinner } from "../components/Spinner";
 import { Footer } from "../components/Footer";
+import { TodoSearch } from "../components/TodoSearch";
 export function AppUI() {
   const {
     error,
@@ -18,10 +19,16 @@ export function AppUI() {
     deleteTodo,
     openModal,
     setOpenModal,
+    searchValue,
+    setSearchValue,
   } = React.useContext(TodoContext);
+
   return (
     <>
-      <Header />
+      <Header>
+        <TodoSearch searchValue={searchValue} setSearchValue={setSearchValue} />
+      </Header>
+
       <TodoCounter />
 
       <TodoList>

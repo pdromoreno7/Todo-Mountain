@@ -12,7 +12,7 @@ const TodoListStyles = styled.section`
     align-items: center;
     width: 100%;
     height: 100%;
-    padding: 50px 0;
+    padding: 25px 0;
     overflow: hidden;
     transition: 1s;
   }
