@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { TodoContext } from "../TodoContext/TodoContext";
 
 const TodoFormStyles = styled.form`
   background-color: var(--main-color);
@@ -73,10 +72,10 @@ const TodoFormStyles = styled.form`
   }
 `;
 
-export function TodoForm() {
+export function TodoForm({ addTodo, setOpenModal }) {
   const [newTodoValue, setNewTodoValue] = React.useState("");
 
-  const { addTodo, setOpenModal } = React.useContext(TodoContext);
+  // const { addTodo, setOpenModal } = React.useContext(TodoContext);
 
   const onCancel = () => {
     setOpenModal(false);

@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { TodoContext } from "../TodoContext/TodoContext";
 
 const CounterStyles = styled.section`
   margin-top: 40px;
@@ -14,8 +13,7 @@ const CounterStyles = styled.section`
   }
 `;
 
-export function TodoCounter() {
-  const { totalTodos, completedTodos } = React.useContext(TodoContext);
+export function TodoCounter({ totalTodos, completedTodos }) {
   return (
     <CounterStyles>
       <div className="bd-container counter__container">
