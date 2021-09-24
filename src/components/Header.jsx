@@ -22,15 +22,16 @@ const HeaderStyles = styled.header`
   }
 `;
 
-export function Header(props) {
+export function Header({ children, loading }) {
   return (
     <HeaderStyles>
       <div className="header__container">
         <div className="header__box mobile-container">
           <h1 className="header__title">TODO</h1>
           <div className="header__search">
-            {/* <TodoSearch/> */}
-            {props.children}
+            {React.Children.toArray(children).map((child) =>
+              React.cloneElement(child, { loading })
+            )}
           </div>
         </div>
       </div>

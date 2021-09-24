@@ -40,6 +40,9 @@ const Searchstyles = styled.div`
     outline: none;
     box-shadow: 0 0 5pt 2pt #4b4b4b;
   }
+  /* .search__box input:disabled {
+    opacity: 50%;
+  } */
 `;
 
 export function TodoSearch({ searchValue, setSearchValue, loading }) {
@@ -51,8 +54,8 @@ export function TodoSearch({ searchValue, setSearchValue, loading }) {
   };
 
   return (
-    <Searchstyles>
-      <form className="search__container">
+    <Searchstyles className={`${!!loading && "TodoCounter-loading"}`}>
+      <form className="search__container ">
         <div className="search__box">
           <input
             type="text"

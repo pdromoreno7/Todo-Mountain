@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 const CounterStyles = styled.section`
   margin-top: 40px;
+  transition: 1s;
   .counter__container {
     text-align: center;
 
@@ -11,11 +12,14 @@ const CounterStyles = styled.section`
       color: var(--font-color-1);
     }
   }
+  /* .TodoCounter-loading {
+    opacity: 25%;
+  } */
 `;
 
 export function TodoCounter({ totalTodos, completedTodos, loading }) {
   return (
-    <CounterStyles>
+    <CounterStyles className={`${!!loading && "TodoCounter-loading"}`}>
       <div className="bd-container counter__container">
         <p>
           Has completado{" "}

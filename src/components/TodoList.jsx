@@ -24,7 +24,7 @@ export function TodoList(props) {
   const renderFunc = props.children || props.render;
 
   return (
-    <TodoListStyles className="mobile-container">
+    <TodoListStyles className="mobile-container transicion-one">
       {props.error && props.onError()}
       {props.loading && props.onLoading()}
       {!props.loading && !props.totalTodos && props.onEmptyTodos()}
