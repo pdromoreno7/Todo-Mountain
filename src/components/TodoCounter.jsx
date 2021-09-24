@@ -13,7 +13,7 @@ const CounterStyles = styled.section`
   }
 `;
 
-export function TodoCounter({ totalTodos, completedTodos }) {
+export function TodoCounter({ totalTodos, completedTodos, loading }) {
   return (
     <CounterStyles>
       <div className="bd-container counter__container">

@@ -42,7 +42,7 @@ const Searchstyles = styled.div`
   }
 `;
 
-export function TodoSearch({ searchValue, setSearchValue }) {
+export function TodoSearch({ searchValue, setSearchValue, loading }) {
   // const { searchValue, setSearchValue } = React.useContext(TodoContext);
 
   const onSearchValueChange = (e) => {
@@ -60,6 +60,7 @@ export function TodoSearch({ searchValue, setSearchValue }) {
             value={searchValue}
             className="search__box-input"
             onChange={onSearchValueChange}
+            disabled={loading}
           />
           <button className="search__box-button" type="submit">
             <FaSearch size={15} />
