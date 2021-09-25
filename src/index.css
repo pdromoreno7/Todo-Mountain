@@ -86,9 +86,9 @@ button {
   overflow: hidden;
   padding: 0 1rem;
 }
-.TodoCounter-loading {
+/* .TodoCounter-loading {
   opacity: 25%;
-}
-.transicion-one {
+} */
+/* .transicion-one {
   transition: 1s;
-}
+} */
