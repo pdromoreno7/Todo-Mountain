@@ -8,7 +8,7 @@ import { TodoList } from "../components/TodoList";
 import { Modal } from "../components/Modal";
 import { TodoForm } from "../components/TodoForm";
 import { Spinner } from "../components/Spinner";
-import { Footer } from "../components/Footer";
+// import { Footer } from "../components/Footer";
 import { TodoSearch } from "../components/TodoSearch";
 
 function App() {
@@ -73,7 +73,7 @@ function App() {
       )}
 
       <CreateTodoButton setOpenModal={setOpenModal} openModal={openModal} />
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

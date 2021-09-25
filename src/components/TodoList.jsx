@@ -21,7 +21,7 @@ const TodoListStyles = styled.section`
 
 export function TodoList(props) {
   //Asi si la props es un children igualmente funcionara:
-  const renderFunc = props.children || props.render;
+  // const renderFunc = props.children || props.render;
 
   return (
     <TodoListStyles className="mobile-container transicion-one">
@@ -32,7 +32,7 @@ export function TodoList(props) {
         !props.searchedTodos.length &&
         props.onEmptySearchResults(props.searchText)}
 
-      <ul className="todoList__box">{props.searchedTodos.map(renderFunc)}</ul>
+      <ul className="todoList__box">{props.searchedTodos.map(props.render)}</ul>
     </TodoListStyles>
   );
 }
