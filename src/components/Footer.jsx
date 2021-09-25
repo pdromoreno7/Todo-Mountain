@@ -15,7 +15,9 @@ const FooterStyles = styled.footer`
 export function Footer() {
   return (
     <FooterStyles>
-      <p class="footer__copy">&#169; 2021 Pedro Moreno. All rights reserved</p>
+      <p className="footer__copy">
+        &#169; 2021 Pedro Moreno. All rights reserved
+      </p>
     </FooterStyles>
   );
 }
