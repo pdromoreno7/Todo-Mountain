@@ -29,9 +29,10 @@ export function Header({ children, loading }) {
         <div className="header__box mobile-container">
           <h1 className="header__title">TODO</h1>
           <div className="header__search">
-            {React.Children.toArray(children).map((child) =>
+            {/* {React.Children.toArray(children).map((child) =>
               React.cloneElement(child, { loading })
-            )}
+            )} */}
+            {children}
           </div>
         </div>
       </div>

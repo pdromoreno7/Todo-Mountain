@@ -31,7 +31,7 @@ function App() {
     <>
       <Header loading={loading}>
         <TodoSearch
-          // loading={loading}
+          loading={loading}
           searchValue={searchValue}
           setSearchValue={setSearchValue}
         />
