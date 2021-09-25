@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Todo-Mountain/static/css/main.625c63cd.chunk.css",
+    "main.css": "/Todo-Mountain/static/css/main.4a4cf711.chunk.css",
     "main.js": "/Todo-Mountain/static/js/main.fb1aeaad.chunk.js",
     "main.js.map": "/Todo-Mountain/static/js/main.fb1aeaad.chunk.js.map",
     "runtime-main.js": "/Todo-Mountain/static/js/runtime-main.5cb08315.js",
@@ -8,14 +8,14 @@
     "static/js/2.135984f3.chunk.js": "/Todo-Mountain/static/js/2.135984f3.chunk.js",
     "static/js/2.135984f3.chunk.js.map": "/Todo-Mountain/static/js/2.135984f3.chunk.js.map",
     "index.html": "/Todo-Mountain/index.html",
-    "static/css/main.625c63cd.chunk.css.map": "/Todo-Mountain/static/css/main.625c63cd.chunk.css.map",
+    "static/css/main.4a4cf711.chunk.css.map": "/Todo-Mountain/static/css/main.4a4cf711.chunk.css.map",
     "static/js/2.135984f3.chunk.js.LICENSE.txt": "/Todo-Mountain/static/js/2.135984f3.chunk.js.LICENSE.txt",
     "static/media/Header.css": "/Todo-Mountain/static/media/pexels-pixabay-417173.0dd29f09.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.5cb08315.js",
     "static/js/2.135984f3.chunk.js",
-    "static/css/main.625c63cd.chunk.css",
+    "static/css/main.4a4cf711.chunk.css",
     "static/js/main.fb1aeaad.chunk.js"
   ]
 }
